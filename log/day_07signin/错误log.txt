@@ -1,0 +1,19 @@
+
+1、orm
+findAll（）函数
+更正：if args ==> if args is None:
+
+2、coreweb
+class RequestHandler(object):
+        async def __call__(self, request):
+报错：TypeError:__init__() takes 1 positional argument but 2 were given
+更正：if name is kw ==> if name in kw (气死)
+
+3、app &登录异常，登陆后还是未登录状态
+加入了一行  r['__user__'] = request.__user__
+AttributeError: 'Request' object has no attribute '__user__'
+解决：没把auth_factory加到参数里去
+        app = web.Application(loop=loop, middlewares=[
+        logger_factory,auth_factory, response_factory])
+
+

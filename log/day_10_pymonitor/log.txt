@@ -1,0 +1,15 @@
+每次修改python代码都需要停止服务器再重启，改动才能生效，非常麻烦。
+Django的开发环境在Debug模式下可以自动重新加载，但Django没把这个功能独立出来。
+
+python本身提供了重新载入模块的功能，但不是所有的模块都能被重新载入。
+一种思路是检测www目录下的代码改动，一旦有所改动，就重启服务器。
+
+编写一个辅助程序pymonitor.py，让它启动app.py，并时刻监控www目录下的代码改动，一旦有所改动，就把当前app.py进程关闭再重启。
+
+监控目录文件的变化，也无需手动定时扫描，python的第三方库watchdog可以利用操作系统的API来监控目录文件的变化并发送通知。
+
+watchdog只能处理后端的，虽然会重启线程，但并不会自动刷新浏览器
+LiveReload：改动php, html，css，js都能重刷chrome
+LiveStyle：css双向绑定，在chrome改动css，代码自动更新；或者在代码改动css，chrome自动更新
+
+Pycharm 上运行根本没什么反应

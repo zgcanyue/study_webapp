@@ -1,0 +1,14 @@
+coreweb.py
+
+编写一个Web框架
+	虽然python已经有aiohttp框架，但相对比较底层，所以为了使用者方便，重新封装一个框架
+
+1、编写URL处理函数
+	1、编写@asyncio.coroutine装饰函数；
+	2、从request传入参数；
+	3、构造Response对象
+
+2、封装URL处理函数  RequestHandler()
+	从URL函数中分析其需要接收的参数，从request中获取必要的参数，调用URL函数，然后把结果转换为web.Response对象
+
+3、注册URL处理函数  add_route()

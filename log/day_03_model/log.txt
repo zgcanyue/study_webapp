@@ -1,0 +1,7 @@
+Model.py
+
+ORM完成了，就需要把Web App需要的三个表(User、Blog、Comment)表示出来
+
+初始化数据库表
+
+在数据库(app)中创建三张表(User、Blog、Comment)，并做测试，结果数据能成功存储

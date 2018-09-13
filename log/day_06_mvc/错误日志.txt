@@ -1,0 +1,10 @@
+isinstance
+是用于判断一个对象是否是一个类的实例的函数
+
+解决：
+
+1、在handlers.py里编写 index，而不是在app.py里
+
+2、app = web.Application(loop=loop, middlewares=[
+        logger_factory, response_factory])
+     里面参数不能少

@@ -1,0 +1,12 @@
+app.py
+
+aiohttp是基于asyncio实现的HTTP框架，用aiohttp创建一个简单的web app页面，接受请求，返回响应（html页面）。
+
+asyncio是python3.4版本引入的标准库，直接内置了对异步io的支持。asyncio的编
+程模型就是一个消息循环，从asyncio模块中直接获取一个EventLoop（事件循环）
+的引用，然后把需要执行的协程扔到EvenLoop中执行，就实现了异步IO。
+
+yield类似于return，提供一个返回值，不同于return的是，在返回值以后不是停止运行代码，而是交出cpu使用权，并在此处中断，
+代码并未结束，在遇到next()或send()方法后，yield可以从中断处继续执行，使用yield会让函数变为生成器generator。
+
+yield from 生成器里嵌套生成器

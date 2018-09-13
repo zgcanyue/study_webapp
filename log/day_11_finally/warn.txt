@@ -1,0 +1,5 @@
+
+1、@get('/api/blogs/{id}') 里把blogs写成bolgs 导致修改blog后显示页面错误。（血崩，找了一天）
+
+2、html文件和markdown.py里错误，导致新增blog保存显示错误
+
